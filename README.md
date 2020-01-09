@@ -6,7 +6,8 @@ Tutorial
 #### Init Azure Blob ContainerInfo
 ```C#
 
-            var containerInfo = new AzureBlobImageHelper.ContainerInfo("your_azure_storage_connectionstring", "blob_container_name");
+            var containerInfo = new AzureBlobImageHelper
+                                .ContainerInfo("your_azure_storage_connectionstring", "blob_container_name");
 
 ```
 
@@ -14,6 +15,7 @@ Tutorial
 ```C#
             var agent = new AzureBlobImageHelper.Agent(containerInfo);
             Console.WriteLine("Test Upload Image From File.");
-            agent.UpoloadImageToSource("sample4", AppDomain.CurrentDomain.BaseDirectory + "sample.png", "PROJECT1");
+            agent.UpoloadImageToSource("sample4", 
+                                       AppDomain.CurrentDomain.BaseDirectory + "sample.png", "PROJECT1");
             
 ```
