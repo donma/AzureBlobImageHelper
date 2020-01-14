@@ -33,7 +33,8 @@ Tutorial
 
 ```C#
             var agent = new AzureBlobImageHelper.Agent(containerInfo);
-            var imageInfo = AzureBlobImageHelper.Utility.GetImageInfo(AppDomain.CurrentDomain.BaseDirectory + "sample4.jpg", "sample4", "TAGNAME");
+            var imageInfo = AzureBlobImageHelper.Utility.
+                GetImageInfo(AppDomain.CurrentDomain.BaseDirectory + "sample4.jpg", "sample4", "TAGNAME");
             Console.WriteLine(JsonConvert.SerializeObject(imageInfo));
 
 ```
@@ -42,7 +43,8 @@ Tutorial
 
 ```C#
             var agent = new AzureBlobImageHelper.Agent(containerInfo);
-            var imageInfo = AzureBlobImageHelper.Utility.GetImageInfo(AppDomain.CurrentDomain.BaseDirectory + "sample4.jpg", "sample4", "TAGNAME");
+            var imageInfo = AzureBlobImageHelper.Utility
+                            .GetImageInfo(AppDomain.CurrentDomain.BaseDirectory + "sample4.jpg", "sample4", "TAGNAME");
             agent.UpoloadImageInfo(imageInfo, "PROJECT1");
 
 ```
@@ -110,6 +112,7 @@ Tutorial
 
 ```C#
             var agent = new AzureBlobImageHelper.Agent(containerInfo);
+            //live for 20 seconds.
             var res=agent.GetImageThumbFromSource("sample4", "PROJECT1", 0, 100, DateTime.Now.AddSeconds(20));
             Console.WriteLine("the image thumb url is "+res.FullUrl);
 ```
