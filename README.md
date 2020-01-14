@@ -3,6 +3,10 @@
 Tutorial
 ----
 
+一套 library 可以讓你無 server 配合 Mircosoft Azure Storage 做出一套 Image Service ，因為這是 library 版本 ，如果你是想要直接使用 Server 版本，你可以到這裡 https://github.com/donma/N2ImageAgent.AzureBlob2020
+
+Happy Coding :)
+
 #### Init Azure Blob ContainerInfo
 ```C#
 
